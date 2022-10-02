@@ -1,0 +1,36 @@
+@import "../../common/colors";
+
+.card-item {
+  background: $secondary-color;
+  cursor: pointer;
+  transition: all 0.3s;
+  min-height: 28.125rem;
+  height: 100%;
+  margin: 0.625rem;
+  &:hover {
+    transform: scale(1.1);
+    transition: all 0.3s;
+  }
+}
+
+.card-top {
+  height: 18.75rem;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.card-bottom {
+  padding: 1.25rem;
+}
+
+.card-info {
+  color: $font-primary;
+  h4 {
+    font-size: 1.375rem;
+    font-weight: 400;
+    margin-bottom: 0.625rem;
+  }
+}

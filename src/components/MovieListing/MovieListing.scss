@@ -1,0 +1,17 @@
+@import "../../common/colors.scss";
+
+.movie-list,
+.show-list {
+  margin: 1.25rem 0;
+  h2 {
+    color: $font-secondary;
+    margin-bottom: 0.625rem;
+    font-weight: 400;
+  }
+}
+
+// .movie-container {
+//   display: grid;
+//   grid-template-columns: repeat(auto-fill, minmax(13.75rem, 1fr));
+//   grid-gap: 0.9375rem;
+// }
