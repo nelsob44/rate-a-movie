@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import {
   fetchAsyncMovies,
   fetchAsyncShows,
@@ -11,6 +11,8 @@ import "./Header.scss";
 const Header = () => {
   const [term, setTerm] = useState("");
   const dispatch = useDispatch();
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -18,6 +20,8 @@ const Header = () => {
     dispatch(fetchAsyncMovies(term));
     dispatch(fetchAsyncShows(term));
     setTerm("");
+    if (location.pathname !== "/")
+      navigate("/", { state: { doNotReload: true } });
   };
   return (
     <div className="header">
